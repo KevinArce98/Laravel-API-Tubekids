@@ -17,7 +17,7 @@ class AuthController extends ApiController
      */
     public function __construct()
     {
-        $this->middleware('jwt.auth', ['only' => ['user', 'logout']]);
+        $this->middleware('jwt.verify', ['only' => ['user', 'logout']]);
     }
     public function login(Request $request){
         $type_user = "";

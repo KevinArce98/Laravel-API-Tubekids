@@ -9,7 +9,7 @@ class UserKidController extends ApiController
 {
 	public function __construct()
     {
-        $this->middleware('jwt.auth');
+        $this->middleware('jwt.verify');
     }
     /**
      * Display a listing of the resource.

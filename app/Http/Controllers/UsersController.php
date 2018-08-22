@@ -16,7 +16,7 @@ class UsersController extends ApiController
      */
     public function __construct()
     {
-        //$this->middleware('jwt.auth')->except(['store']);
+        $this->middleware('jwt.verify')->except(['store']);
     }
     /**
      * Display a listing of the resource.
